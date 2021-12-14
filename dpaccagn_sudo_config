@@ -1,0 +1,7 @@
+Defaults	passwd_tries=3
+Defaults	badpass_message="Il faut plus de bois"
+Defaults	logfile="/var/log/sudo/sudo.log"
+Defaults	log_input, log_output
+Defaults	iolog_dir="/var/log/sudo"
+Defaults	requiretty
+Defaults	secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
