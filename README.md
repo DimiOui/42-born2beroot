@@ -117,17 +117,26 @@ chage -M 30 -m 2 -W 7 root
 # DEFENSE
 
 ### how a virtual machine works and its purpose
+Do I really need to explain it to you guys ?
+
 ### why chosing Debian over CentOS
 Debian is fully opensource, more portable
+
 CentOS has 10 years long support for each releases
+
 CentOS is more stable than Debian, although Ubuntu is catching up and more packages avalaible
+
 Debian is easier to upgrade, GUI is more friendly
+
 CentOS doesn't support many architectures
 
 ### what's the difference between aptitude and apt
 Aptitude provides a terminal menu interface, apt doesn't
+
 They share the same database of packages
+
 Aptitude will automatically remove packages
+
 Aptitude will provide solutions if you try to remove/install/update packages that cause conflicts
 
 ### what APPARMOR is
