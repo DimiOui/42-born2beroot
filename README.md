@@ -109,10 +109,26 @@ chage -M 30 -m 2 -W 7 root
 
 ### how a virtual machine works and its purpose
 ### why chosing Debian over CentOS
+Debian is fully opensource, more portable
+CentOS has 10 years long support for each releases
+CentOS is more stable than Debian, although Ubuntu is catching up and more packages avalaible
+Debian is easier to upgrade, GUI is more friendly
+CentOS doesn't support many architectures
+
 ### what's the difference between aptitude and apt
+Aptitude provides a terminal menu interface, apt doesn't
+They share the same database of packages
+Aptitude will automatically remove packages
+Aptitude will provide solutions if you try to remove/install/update packages that cause conflicts
+
 ### what APPARMOR is
-### how to view the partitions in the system
+Apparmor is a firewall, the idea is to lock down an app and the files to be accessed with absolute path names,
+followed by the common read/write accesss modes
+
+### how to view the partitions in the system (lsblk)
 ### how LVM works
+More flexible than traditional partitioning, virtual disk partitions
+
 ### how to add a user (adduser)
 ### how to add a group (addgroup)
 ### how to add that user to a group (adduser <user> <group>)
@@ -122,3 +138,6 @@ chage -M 30 -m 2 -W 7 root
 ### how to show the changes you made
 ### how to show your monitoring script (/monitoring.sh)
 ### how to explain how it works
+
+#Usefull commands
+ 
