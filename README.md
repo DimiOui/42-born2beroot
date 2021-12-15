@@ -191,4 +191,5 @@ sudo sysstemctl list-unit-files | grep enabled | grep ssh
 sudo crontab -u root -l
 aa-status
 ss -tunlp
+readlink -f <file>
 ```
