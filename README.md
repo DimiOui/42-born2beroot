@@ -3,7 +3,7 @@ born2beroot  - 42 Paris - December 2021
 
 # To setup a viable 42 Virtual Machine, follow these steps :
 
- - Make sure VM is installed on the current system and download the latest debian disk image
+ - Make sure VirtualBox is installed on the current system and download the latest debian disk image
  - Create a new Virtual Machine - Linux - Debian 64Bits - 1Go RAM - create VDI - Dynamically allocated - 8GB
  (Make sure to install your VM in sgoinfre folder if your working from a school computer)
  - Download a Debian stable distribution iso from the internet (debian-XX.X.X-amd64-netinst.iso)
