@@ -161,7 +161,10 @@ su <login> or su - for root
 ```ssh user@127.0.0.1 -p 4242```
  
 ### how to change the hostname
-```hostnamectl set-hostname <hostname>```
+```
+hostnamectl set-hostname <hostname>
+modify /etc/hosts
+```
  
 ### how to add a rule to UFW
 ```
