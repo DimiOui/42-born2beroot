@@ -99,7 +99,26 @@ sudo ufw allow 4242
 ```
 chage -M 30 -m 2 -W 7 username
 chage -M 30 -m 2 -W 7 root
+# Remember to update your user & root password
 # To check wether pwd policies are active, check login.defs or chage -l username/root
 ```
 
 # BONUS WORDPRESS
+
+# DEFENSE
+
+### how a virtual machine works and its purpose
+### why chosing Debian over CentOS
+### what's the difference between aptitude and apt
+### what APPARMOR is
+### how to view the partitions in the system
+### how LVM works
+### how to add a user (adduser)
+### how to add a group (addgroup)
+### how to add that user to a group (adduser <user> <group>)
+### how to ssh a session with that user (ssh user@127.0.0.1 -p 4242)
+### how to change the hostname (hostnamectl set-hostname <hostname>)
+### how to add a rule to UFW (ufw allow rule)
+### how to show the changes you made
+### how to show your monitoring script (/monitoring.sh)
+### how to explain how it works
