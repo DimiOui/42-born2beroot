@@ -133,19 +133,21 @@ More flexible than traditional partitioning, virtual disk partitions
 
 ### how to add a user 
 ```
-adduser
+sudo adduser <user>
 sudo deluser <user>
 ```
 
 ### how to add a group
 ```
-addgroup
+sudo addgroup <group>
+sudo delgroup <group>
 ```
 
 ### how to add that user to a group
 ```
-adduser <user> <group>
+sudo adduser <user> <group>
 getent group sudo
+sudo deluser <user> <group> 
 ```
 
 ### how to ssh a session with that user
@@ -155,10 +157,16 @@ getent group sudo
 ```hostnamectl set-hostname <hostname>```
  
 ### how to add a rule to UFW
-```ufw allow rule```
+```
+ufw allow rule
+ufw status
+ufw delete <rule number>
+```
  
 ### how to show the changes you made
-```# See all the repo files```
+```
+# See all the repo files
+```
 ### how to show your monitoring script
 ```/monitoring.sh```
 
