@@ -150,7 +150,9 @@ sudo delgroup <group>
 sudo adduser <user> <group>
 getent group sudo
 #to delete use
-sudo deluser <user> <group> 
+sudo deluser <user> <group>
+#to change users
+su <login> or su - for root
 ```
 
 ### how to ssh a session with that user
