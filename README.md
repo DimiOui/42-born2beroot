@@ -126,32 +126,33 @@ Apparmor is a firewall, the idea is to lock down an app and the files to be acce
 followed by the common read/write accesss modes
 
 ### how to view the partitions in the system
-lsblk
+```lsblk```
 
 ### how LVM works
 More flexible than traditional partitioning, virtual disk partitions
 
 ### how to add a user 
-adduser
+```adduser```
 
 ### how to add a group
-addgroup
+```addgroup```
 
 ### how to add that user to a group
-adduser <user> <group>
+```adduser <user> <group>```
 
 ### how to ssh a session with that user
-ssh user@127.0.0.1 -p 4242
+```ssh user@127.0.0.1 -p 4242```
  
 ### how to change the hostname
-hostnamectl set-hostname <hostname>
+```hostnamectl set-hostname <hostname>```
  
 ### how to add a rule to UFW
-ufw allow rule
+```ufw allow rule```
  
 ### how to show the changes you made
+```# See all the repo files```
 ### how to show your monitoring script
-/monitoring.sh
+```/monitoring.sh```
 
 ### how to explain how it works
 
