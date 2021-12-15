@@ -13,19 +13,20 @@ born2beroot  - 42 Paris - December 2021
 
 # Partitioning your virtual disk :
 
-a. Manual partitioning
+##### Manual partitioning
 - Select SCI2/SCI3 (0,0,0)
 - Select pri/log > create new partition, 500 MB, primary, beginning, ext4, /boot, done
 - Select pri/log > create new partition, max, logical, do not mount it, done
 
-b. Configure encrypted volumes
+##### Configure encrypted volumes
 - Yes, create encrypted volumes, /dev/sda5, done, finish, yes (you can cancel the encryption if you desire)
 - Enter the encryption passphrase (btw, do not lose any of your pwd, passphrases)
 
-c. Configure the LVM (Logical Volume Manager)
+##### Configure the LVM (Logical Volume Manager)
 - Chose yes
 - Create Volume Group, LVMGroup, sda5_crypt
 - Create Logical Volume :
+```
  1. root 2GB ext4 /(root)
  2. swap 1024MB swap
  3. home 1GB ext4 /home
@@ -33,6 +34,7 @@ c. Configure the LVM (Logical Volume Manager)
  5. srv 1GB ext4 /srv
  6. tmp 1GB ext4 /tmp
  7. var-log 1056MB ext4 /var/log (manually)
+```
 - Done setting up the partition, write changes (yes), scan another CD or DVD (no), Debian archive mirror (France), proxy info (none), survey (no)
 - Uncheck SSH server and Standard System utilities, install GRUB (yes), /dev/sda (continue)
 
@@ -55,18 +57,18 @@ Congrats, your VM is all set and ready to run.
 
 Copy all the repo files in these directories :
 
-## ssh config file (disable root login, change port to 4242)
+###### ssh config file (disable root login, change port to 4242)
 sshd_config (/etc/ssh/sshd_config)
 
-## password policy config file
+###### password policy config file
 common-password (/etc/pam.d/common-password)
 
-## sudo rules
+###### sudo rules
 dpaccagn_sudo_config (/etc/sudoers.d/dpaccagn_sudo_config)
 
-## password expiration
+###### password expiration
 login.defs (/etc/login.defs)
 
-## cron
+###### cron
 monitoring.sh (/root/monitoring.sh)
 MAKE SURE TO MODIFY CRONTAB WITH ```sudo crontab -u root -e``` and ```*/10 * * * * sh /root/monitoring.sh | wall```
