@@ -48,9 +48,9 @@ Congrats, your VM is all set and ready to run.
 4. sudo apt install ufw
 5. sudo apt install apparmor
 6. sudo apt install libpam-pwquality
-7. sudo apt install lighttpd
-8. sudo apt install mariadb-server
-9. sudo apt install php-cgi php-mysql
+7. sudo apt install lighttpd (bonus)
+8. sudo apt install mariadb-server (bonus)
+9. sudo apt install php-cgi php-mysql (bonus, sudo mysql_secure_installation)
 10. sudo apt install wget
 11. sudo apt install mailutils
 12. sudo apt install postfix
