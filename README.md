@@ -134,12 +134,14 @@ More flexible than traditional partitioning, virtual disk partitions
 ### how to add a user 
 ```
 sudo adduser <user>
+#to delete use
 sudo deluser <user>
 ```
 
 ### how to add a group
 ```
 sudo addgroup <group>
+#to delete use
 sudo delgroup <group>
 ```
 
@@ -147,6 +149,7 @@ sudo delgroup <group>
 ```
 sudo adduser <user> <group>
 getent group sudo
+#to delete use
 sudo deluser <user> <group> 
 ```
 
@@ -160,6 +163,7 @@ sudo deluser <user> <group>
 ```
 ufw allow rule
 ufw status
+#to delete use
 ufw delete <rule number>
 ```
  
