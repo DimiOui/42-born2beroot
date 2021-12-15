@@ -158,7 +158,7 @@ su <login> or su - for root
 ```
 
 ### how to ssh a session with that user
-```ssh user@127.0.0.1 -p 4242```
+```ssh user@127.0.0.1 -p 2222```
  
 ### how to change the hostname
 ```
