@@ -27,13 +27,13 @@ born2beroot  - 42 Paris - December 2021
 - Create Volume Group, LVMGroup, sda5_crypt
 - Create Logical Volume :
 ```
- 1. root 2GB ext4 /(root)
- 2. swap 1024MB swap
- 3. home 1GB ext4 /home
- 4. var 1GB ext4 /var
- 5. srv 1GB ext4 /srv
- 6. tmp 1GB ext4 /tmp
- 7. var-log 1056MB ext4 /var/log (manually)
+ 1. root      2GB       ext4    /(root)
+ 2. swap      1024MB    swap
+ 3. home      1GB       ext4    /home
+ 4. var       1GB       ext4    /var
+ 5. srv       1GB       ext4    /srv
+ 6. tmp       1GB       ext4    /tmp
+ 7. var-log   1056MB    ext4    /var/log (manually)
 ```
 - Done setting up the partition, write changes (yes), scan another CD or DVD (no), Debian archive mirror (France), proxy info (none), survey (no)
 - Uncheck SSH server and Standard System utilities, install GRUB (yes), /dev/sda (continue)
