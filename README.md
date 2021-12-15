@@ -65,6 +65,7 @@ common-password (/etc/pam.d/common-password)
 
 ### sudo rules
 dpaccagn_sudo_config (/etc/sudoers.d/dpaccagn_sudo_config)
+
 https://stackoverflow.com/questions/67985925/why-would-i-want-to-require-a-tty-for-sudo-whats-the-security-benefit-of-requi
 
 ### password expiration
