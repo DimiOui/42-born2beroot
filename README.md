@@ -135,10 +135,16 @@ More flexible than traditional partitioning, virtual disk partitions
 ```adduser```
 
 ### how to add a group
-```addgroup```
+```
+addgroup
+```
 
 ### how to add that user to a group
-```adduser <user> <group>```
+```
+adduser <user> <group>
+getent group sudo
+sudo deluser <user>
+```
 
 ### how to ssh a session with that user
 ```ssh user@127.0.0.1 -p 4242```
@@ -156,5 +162,16 @@ More flexible than traditional partitioning, virtual disk partitions
 
 ### how to explain how it works
 
-#Usefull commands
- 
+# Usefull commands
+
+````
+who
+hostname
+ip a
+uname -a
+chage -l <user>
+ssh -V
+sudo sysstemctl list-unit-files | grep enabled | grep ssh
+sudo crontab -u root -l
+aa-status
+```
