@@ -51,7 +51,7 @@ Congrats, your VM is all set and ready to run.
 7. sudo apt install lighttpd (bonus)
 8. sudo apt install mariadb-server (bonus)
 9. sudo apt install php-cgi php-mysql (bonus, sudo mysql_secure_installation)
-10. sudo apt install wget
+10. sudo apt install wget (bonus)
 11. sudo apt install mailutils
 12. sudo apt install postfix
 
