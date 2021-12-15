@@ -75,6 +75,11 @@ login.defs (/etc/login.defs)
 monitoring.sh (/root/monitoring.sh)
 
 MAKE SURE TO MODIFY CRONTAB WITH ```sudo crontab -u root -e``` and ```*/10 * * * * sh /root/monitoring.sh | wall```
+```
+crontab -l to check crontab tasks
+crontab -r to delete tasks
+crontab -e to edit
+```
 
 All is well ? Okay, now let's carry on.
 
@@ -184,9 +189,6 @@ ufw delete <rule number>
 ```/monitoring.sh```
 
 ### explain how it works
-
-# BONUS
-
 
 # Usefull commands
 
