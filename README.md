@@ -1,7 +1,7 @@
 # born2beroot
 born2beroot  - 42 Paris - December 2021
 
-1. To setup a viable 42 Virtual Machine, follow these steps :
+# To setup a viable 42 Virtual Machine, follow these steps :
 
  - Make sure VM is installed on the current system and download the latest debian disk image
  - Create a new Virtual Machine - Linux - Debian 64Bits - 1Go RAM - create VDI - Dynamically allocated - 8GB
@@ -11,7 +11,7 @@ born2beroot  - 42 Paris - December 2021
  - Run your VM and run install
  - Continue until configuring the hostname (login42), domain name (empty), username (login)
 
-2. Partitioning your virtual disk :
+# Partitioning your virtual disk :
 
 a. Manual partitioning
 - Select SCI2/SCI3 (0,0,0)
@@ -38,7 +38,7 @@ c. Configure the LVM (Logical Volume Manager)
 
 Congrats, your VM is all set and ready to run.
 
-List of tasks to be done after setting up the VM (details below the list) :
+# List of tasks to be done after setting up the VM (details below the list) :
 
 1. sudo apt install sudo
 2. sudo apt install vim
@@ -55,11 +55,18 @@ List of tasks to be done after setting up the VM (details below the list) :
 
 Copy all the repo files in these directories :
 
-# ssh config file (disable root login, change port to 4242)
+## ssh config file (disable root login, change port to 4242)
 sshd_config (/etc/ssh/sshd_config)
 
-# password policy config file
-common-password (/etc/pam.d)
+## password policy config file
+common-password (/etc/pam.d/common-password)
 
-# sudo rules
-dpaccagn_sudo_config (/etc/sudo
+## sudo rules
+dpaccagn_sudo_config (/etc/sudoers.d/dpaccagn_sudo_config)
+
+## password expiration
+login.defs (/etc/login.defs)
+
+## cron
+monitoring.sh (/root/monitoring.sh)
+MAKE SURE TO MODIFY CRONTAB WITH ```sudo crontab -u root -e``` and ```*/10 * * * * sh /root/monitoring.sh | wall```
