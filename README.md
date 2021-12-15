@@ -181,7 +181,7 @@ ufw delete <rule number>
 ### how to show your monitoring script
 ```/monitoring.sh```
 
-### how to explain how it works
+### explain how it works
 
 # Usefull commands
 
