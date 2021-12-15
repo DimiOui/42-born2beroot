@@ -132,7 +132,10 @@ followed by the common read/write accesss modes
 More flexible than traditional partitioning, virtual disk partitions
 
 ### how to add a user 
-```adduser```
+```
+adduser
+sudo deluser <user>
+```
 
 ### how to add a group
 ```
@@ -143,7 +146,6 @@ addgroup
 ```
 adduser <user> <group>
 getent group sudo
-sudo deluser <user>
 ```
 
 ### how to ssh a session with that user
