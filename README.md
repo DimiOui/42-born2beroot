@@ -136,6 +136,8 @@ More flexible than traditional partitioning, virtual disk partitions
 sudo adduser <user>
 #to delete use
 sudo deluser <user>
+#to see list of user
+cat /etc/passwd
 ```
 
 ### how to add a group
