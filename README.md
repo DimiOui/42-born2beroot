@@ -174,7 +174,7 @@ ufw delete <rule number>
 
 # Usefull commands
 
-````
+```
 who
 hostname
 ip a
