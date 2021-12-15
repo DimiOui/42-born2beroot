@@ -112,6 +112,8 @@ chage -M 30 -m 2 -W 7 root
 
 # BONUS WORDPRESS
 
+```sudo mysql_secure_installation```
+
 # DEFENSE
 
 ### how a virtual machine works and its purpose
