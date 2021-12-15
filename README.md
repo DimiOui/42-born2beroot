@@ -13,16 +13,16 @@ born2beroot  - 42 Paris - December 2021
 
 # Partitioning your virtual disk :
 
-##### Manual partitioning
+### Manual partitioning
 - Select SCI2/SCI3 (0,0,0)
 - Select pri/log > create new partition, 500 MB, primary, beginning, ext4, /boot, done
 - Select pri/log > create new partition, max, logical, do not mount it, done
 
-##### Configure encrypted volumes
+### Configure encrypted volumes
 - Yes, create encrypted volumes, /dev/sda5, done, finish, yes (you can cancel the encryption if you desire)
 - Enter the encryption passphrase (btw, do not lose any of your pwd, passphrases)
 
-##### Configure the LVM (Logical Volume Manager)
+### Configure the LVM (Logical Volume Manager)
 - Chose yes
 - Create Volume Group, LVMGroup, sda5_crypt
 - Create Logical Volume :
