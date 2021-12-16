@@ -149,6 +149,16 @@ sudo vim /etc/lighttps/lighttpd.conf
 # add "mod_rewrite", to the top of the file
 sudo systemctl restart lighttpd.service
 ```
+# BONUS MAILBOX
+
+```
+sudo apt install mailutils
+sudo apt install postfix (chose internet)
+systemctl status postfix
+echo "Mail body" | mail -s "subject" address@mail.com
+cd /var/log
+sudoo cat mail.log
+```
 
 Now you can portforward your VM, open a webpage and put 127.0.0.1:XXXX, your wordpress page awaits you :)
 # DEFENSE
