@@ -114,8 +114,43 @@ chage -M 30 -m 2 -W 7 root
 
 # BONUS WORDPRESS
 
-```sudo mysql_secure_installation```
+```
+#install lighttpd, mariadb-server and ufw allow 80 to open ports
+sudo mysql_secure_installation
+set no password
+sudo mariadb
+[(none)]CREATE DATABASE wordpress;
+[(none)]GRANT ALL ON wordpress.* TO 'root'@'localhost' IDENTIFIED BY ''(this is 2 single quotes) WITH GRANT OPTION;
+[(none)]FLUSH PRIVILEGES;
+[(none)]exit
 
+#check your database with mariadb -u root -p SHOW DATABASES;
+
+sudo apt install php-cgi php-mysql
+sudo apt install wget
+sudo wget http://wordpress.org/latest.tar.gz -P /var/www/html
+
+#extract tar and copy everything into /var/www/html and create the WP config file from its sample
+
+sudo cp /var/www/html/wp-config-sample.php /var/www/html/wp-config.php
+
+#change these lines
+
+'DB_NAME', 'wordpress';
+'DB_USER', 'root';
+'DB_PASSWORD', '';
+
+sudo chown -R www-data:www-data /var/www/html/
+sudo chmod -R 755 /var/www/html/
+sudo lighty-enable-mod fastcgi
+sudo lighty-enable-mod fastcgi-php
+sudo service lighttpd force-reload
+sudo vim /etc/lighttps/lighttpd.conf 
+# add "mod_rewrite", to the top of the file
+sudo systemctl restart lighttpd.service
+```
+
+Now you can portforward your VM, open a webpage and put 127.0.0.1:XXXX, your wordpress page awaits you :)
 # DEFENSE
 
 ### how a virtual machine works and its purpose
