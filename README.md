@@ -1,5 +1,13 @@
 # born2beroot
 born2beroot  - 42 Paris - December 2021
+# Files to turn in
+
+```
+shasum born2beroot.vdi | awk '{print $1}'> signature.txt
+```
+Turn in the signature.txt
+
+Make sure to snapshot your VM before you turn in your signature file :)
 
 # To setup a viable 42 Virtual Machine, follow these steps :
 
@@ -112,7 +120,7 @@ chage -M 30 -m 2 -W 7 root
 # To check wether pwd policies are active, check login.defs or chage -l username/root
 ```
 
-# BONUS WORDPRESS
+# Bonus Wordpress
 
 ```
 #install lighttpd, mariadb-server and ufw allow 80 to open ports
@@ -151,7 +159,7 @@ sudo systemctl restart lighttpd.service
 ```
 Now you can portforward your VM, open a webpage and put 127.0.0.1:XXXX, your wordpress page awaits you :)
 
-# BONUS MAILBOX
+# Bonus Mailbox
 
 ```
 sudo apt install mailutils
@@ -162,7 +170,7 @@ cd /var/log
 sudoo cat mail.log
 ```
 
-# DEFENSE
+# Defense
 
 ### how a virtual machine works and its purpose
 Do I really need to explain it to you guys ?
