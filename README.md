@@ -59,6 +59,7 @@ Copy all the repo files in these directories :
 
 ### ssh config file (disable root login, change port to 4242)
 sshd_config (/etc/ssh/sshd_config)
+You have to portforward your VM in VirtualBox > Settings > Network > Advanced
 
 ### password policy config file
 common-password (/etc/pam.d/common-password)
@@ -215,4 +216,5 @@ sudo crontab -u root -l
 aa-status
 ss -tunlp
 readlink -f <file>
+sudo passwd <user>
 ```
