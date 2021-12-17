@@ -214,11 +214,14 @@ Sudo is configured with strict rules :
 - 3 attempts to get the PW right
 - custom message when the PW is wrong
 - each sudo cmd is archived in /var/log/sudo/sudo.log
+- 
 TTY : https://stackoverflow.com/questions/67985925/why-would-i-want-to-require-a-tty-for-sudo-whats-the-security-benefit-of-requi
+
 ```login.defs``` rules :
 - expire every 30 days
 - warning 7 days before expiration
 - minimum of 2 days before allowing to change PW
+
 ```common-password``` policies :
 - at least 10 characters long
 - one uppercase letter, one lowercase, one digit
