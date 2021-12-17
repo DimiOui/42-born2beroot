@@ -65,23 +65,27 @@ Congrats, your VM is all set and ready to run.
 
 Copy all the repo files in these directories :
 
-### ssh config file (disable root login, change port to 4242)
+### Ssh config file (disable root login, change port to 4242)
 sshd_config (/etc/ssh/sshd_config)
 
 You have to portforward your VM in VirtualBox > Settings > Network > Advanced
 
-### password policy config file
+### Password policy config file
 common-password (/etc/pam.d/common-password)
 
-### sudo rules
+More on this below.
+
+### Sudo rules
 dpaccagn_sudo_config (/etc/sudoers.d/dpaccagn_sudo_config)
 
-https://stackoverflow.com/questions/67985925/why-would-i-want-to-require-a-tty-for-sudo-whats-the-security-benefit-of-requi
+More on this below.
 
-### password expiration
+### Password expiration
 login.defs (/etc/login.defs)
 
-### cron
+More on this below.
+
+### Cron
 monitoring.sh (/root/monitoring.sh)
 
 MAKE SURE TO MODIFY CRONTAB WITH ```sudo crontab -u root -e``` and ```*/10 * * * * sh /root/monitoring.sh | wall```
@@ -132,7 +136,7 @@ sudo mariadb
 [(none)]FLUSH PRIVILEGES;
 [(none)]exit
 
-#check your database with mariadb -u root -p SHOW DATABASES;
+# check your database with mariadb -u root -p SHOW DATABASES;
 
 sudo apt install php-cgi php-mysql
 sudo apt install wget
@@ -205,6 +209,24 @@ followed by the common read/write accesss modes
 ### how LVM works
 More flexible than traditional partitioning, virtual disk partitions
 
+### Explain the password policy
+Sudo is configured with strict rules :
+- 3 attempts to get the PW right
+- custom message when the PW is wrong
+- each sudo cmd is archived in /var/log/sudo/sudo.log
+TTY : https://stackoverflow.com/questions/67985925/why-would-i-want-to-require-a-tty-for-sudo-whats-the-security-benefit-of-requi
+```login.defs``` rules :
+- expire every 30 days
+- warning 7 days before expiration
+- minimum of 2 days before allowing to change PW
+```common-password``` policies :
+- at least 10 characters long
+- one uppercase letter, one lowercase, one digit
+- no more than 3 retries
+- can't include username
+- no more than 3 identical characters in a row
+- at least 7 characters different from old PW
+
 ### how to add a user 
 ```
 sudo adduser <user>
@@ -256,6 +278,16 @@ ufw delete <rule number>
 ```/monitoring.sh```
 
 ### explain how it works
+
+### what is MariaDB, lighttpd and php
+
+MariaDB and Mysql are server database ressources to manage webservers.
+
+MariaDB is a fork of Mysql.
+
+Lighttpd is a lightweght web server.
+
+Php is a general-purpose scripting language that can be used to develop dynamic and interactive websites. 
 
 # Usefull commands
 
