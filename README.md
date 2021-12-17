@@ -307,4 +307,10 @@ aa-status
 ss -tunlp
 readlink -f <file>
 sudo passwd <user>
+su - or su <username>
+adduser <username> sudo or usermod -aG <username>
+getent group sudo or groups <username>
+service ssh restart
+sudo service ssh status or systemctl status ssh
+sudo UFW status/enable/allow
 ```
