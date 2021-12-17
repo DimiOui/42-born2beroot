@@ -270,7 +270,7 @@ modify /etc/hosts
 ufw allow rule
 ufw status
 #to delete use
-ufw delete <rule number>
+ufw deny <rule number>
 ```
  
 ### how to show the changes you made
