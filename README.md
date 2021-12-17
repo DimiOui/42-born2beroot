@@ -90,6 +90,7 @@ monitoring.sh (/root/monitoring.sh)
 
 MAKE SURE TO MODIFY CRONTAB WITH ```sudo crontab -u root -e``` and ```*/10 * * * * sh /root/monitoring.sh | wall```
 ```
+systemctl disable cron
 crontab -l to check crontab tasks
 crontab -r to delete tasks
 crontab -e to edit
