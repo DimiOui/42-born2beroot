@@ -2,7 +2,7 @@
 born2beroot  - 42 Paris - December 2021
 # Files to turn in
 
-```
+```bash
 shasum born2beroot.vdi | awk '{print $1}'> signature.txt
 ```
 Turn in the signature.txt
@@ -34,7 +34,7 @@ Make sure to snapshot your VM before you turn in your signature file :)
 - Chose yes
 - Create Volume Group, LVMGroup, sda5_crypt
 - Create Logical Volume :
-```
+```bash
  1. root      2GB       ext4    /(root)
  2. swap      1024MB    swap
  3. home      1GB       ext4    /home
@@ -89,7 +89,7 @@ More on this below.
 monitoring.sh (/root/monitoring.sh)
 
 MAKE SURE TO MODIFY CRONTAB WITH ```sudo crontab -u root -e``` and ```*/10 * * * * sh /root/monitoring.sh | wall```
-```
+```bash
 systemctl disable cron
 crontab -l to check crontab tasks
 crontab -r to delete tasks
@@ -102,7 +102,7 @@ All is well ? Okay, now let's carry on.
 
 ### Sudo log dir
 
-```
+```bash
 sudo mkdir /var/log/sudo
 sudo touch /var/log/sudo/sudo.log
 sudo chmod 755 /var/log/sudo
@@ -111,14 +111,14 @@ sudo chmod 755 /var/log/sudo/sudo.log
 
 ### UFW
 
-```
+```bash
 sudo ufw enable
 sudo ufw allow 4242
 ```
 
 ### Pwd Policy
 
-```
+```bash
 chage -M 30 -m 2 -W 7 username
 chage -M 30 -m 2 -W 7 root
 # Remember to update your user & root password
@@ -127,7 +127,7 @@ chage -M 30 -m 2 -W 7 root
 
 # Bonus Wordpress
 
-```
+```c
 #install lighttpd, mariadb-server and ufw allow 80 to open ports
 sudo mysql_secure_installation
 set no password
@@ -166,7 +166,7 @@ Now you can portforward your VM, open a webpage and put 127.0.0.1:XXXX, your wor
 
 # Bonus Mailbox
 
-```
+```bash
 sudo apt install mailutils
 sudo apt install postfix (chose internet)
 systemctl status postfix
@@ -232,7 +232,7 @@ TTY : https://stackoverflow.com/questions/67985925/why-would-i-want-to-require-a
 - at least 7 characters different from old PW
 
 ### how to add a user 
-```
+```bash
 sudo adduser <user>
 #to delete use
 sudo deluser <user>
@@ -241,14 +241,14 @@ cat /etc/passwd
 ```
 
 ### how to add a group
-```
+```bash
 sudo addgroup <group>
 #to delete use
 sudo delgroup <group>
 ```
 
 ### how to add that user to a group
-```
+```bash
 sudo adduser <user> <group>
 getent group sudo
 #to delete use
@@ -258,10 +258,12 @@ su <login> or su - for root
 ```
 
 ### how to ssh a session with that user
-```ssh user@127.0.0.1 -p 2222```
+```bash
+ssh user@127.0.0.1 -p 2222
+```
  
 ### how to change the hostname
-```
+```bash
 hostnamectl set-hostname <hostname>
 modify /etc/hosts
 ```
